@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowDown, FileText, Send } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { useAppTheme } from '../context/ThemeContext';
+import professionalPortrait from '../../exemplos/Retrato profissional de homem com óculos.png';
 
 interface HeroProps {
   onNavigateToTrajectory: () => void;
@@ -75,7 +76,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToTrajectory, onNavigateTo
               >
                 <div className="h-[400px] w-full overflow-hidden">
                   <img
-                    src="/src/assets/images/fabiano_portrait_1792285061510.jpg"
+                    src={professionalPortrait}
                     alt="Foto profissional de Fabiano de Amaro Corrêa"
                     className="w-full h-full object-cover object-[center_18%] filter contrast-[1.03]"
                     loading="eager"
