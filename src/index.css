@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #212529;
+  --bg-card: #282c31;
+  --bg-card-alt: #1c1f22;
+  --border-card: #383e44;
+  --border-card-hover: #651fff;
+  --accent-primary: #651fff;
+  --accent-glow: rgba(101, 31, 255, 0.2);
+  --accent-success: #00e676;
+  --accent-station: #651fff;
+  --text-highlight: #7c3aed;
+  --text-platinum: #eceff1;
+  --nav-bg: rgba(33, 37, 41, 0.94);
+}
+
+:root[data-theme="ultraviolet"] {
+  --bg-main: #212529;
+  --bg-card: #282c31;
+  --bg-card-alt: #1a1d20;
+  --border-card: #373d44;
+  --border-card-hover: #7c3aed;
+  --accent-primary: #651fff;
+  --accent-glow: rgba(101, 31, 255, 0.22);
+  --accent-success: #00e676;
+  --accent-station: #651fff;
+  --text-highlight: #8b5cf6;
+  --text-platinum: #eceff1;
+  --nav-bg: rgba(33, 37, 41, 0.94);
+}
+
+:root[data-theme="emerald"] {
+  --bg-main: #0b0f0d;
+  --bg-card: #0d1410;
+  --bg-card-alt: #080c0a;
+  --border-card: #16241a;
+  --border-card-hover: #059669;
+  --accent-primary: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.18);
+  --accent-success: #10b981;
+  --accent-station: #f97316;
+  --text-highlight: #34d399;
+  --text-platinum: #f1f5f9;
+  --nav-bg: rgba(11, 15, 13, 0.94);
+}
+
+:root[data-theme="blue"] {
+  --bg-main: #090d16;
+  --bg-card: #0f172a;
+  --bg-card-alt: #0c1220;
+  --border-card: #1e293b;
+  --border-card-hover: #3b82f6;
+  --accent-primary: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.18);
+  --accent-success: #10b981;
+  --accent-station: #f59e0b;
+  --text-highlight: #60a5fa;
+  --text-platinum: #f8fafc;
+  --nav-bg: rgba(9, 13, 22, 0.94);
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-platinum);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-card);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Print styles for Resume view */
+@media print {
+  body {
+    background: white !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-card {
+    border: 1px solid #cbd5e1 !important;
+    background: white !important;
+    color: #0f172a !important;
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}

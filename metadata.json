@@ -1,0 +1,8 @@
+{
+  "name": "Fabiano — Especialista SRE, Dados & Confiabilidade",
+  "description": "Site institucional e currículo interativo de Fabiano. Trajetória profissional, atuação em dados, infraestrutura, confiabilidade e projetos em andamento com IA e AWS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
