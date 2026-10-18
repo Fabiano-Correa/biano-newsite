@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, FileDown } from 'lucide-react';
-import { ThemeSwitcher } from './ThemeSwitcher';
 import { useAppTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
@@ -42,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onOpenResumePrint
         borderColor: isScrolled ? 'var(--border-card)' : 'transparent',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-6 lg:gap-8">
           {/* Brand with dot */}
           <a
@@ -93,9 +92,6 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onOpenResumePrint
 
           {/* Action buttons + Theme Switcher */}
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            {/* Theme Switcher */}
-            <ThemeSwitcher />
-
             <button
               onClick={onOpenResumePrint}
               className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors whitespace-nowrap"

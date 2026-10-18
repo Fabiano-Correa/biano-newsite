@@ -43,7 +43,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contato"
-      className="py-24 border-t"
+      className="pt-24 pb-12 lg:pb-10 border-t"
       style={{
         backgroundColor: 'var(--bg-main)',
         borderColor: 'var(--border-card)',
@@ -53,7 +53,7 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Real Contact Information (ZERO Location) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-5">
             <div>
               <div
                 className="text-xs font-bold uppercase tracking-wider mb-2"
@@ -230,21 +230,18 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6 border-t text-xs text-slate-400" style={{ borderColor: 'var(--border-card)' }}>
-              <p>Disponível para contato profissional, conexões técnicas e novos projetos.</p>
-            </div>
           </div>
 
           {/* Right Column: Interactive Message Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 lg:mt-[82px]">
             <div
-              className="p-8 sm:p-10 rounded-2xl border shadow-2xl"
+              className="p-6 sm:p-8 rounded-2xl border shadow-2xl"
               style={{
                 backgroundColor: 'var(--bg-card)',
                 borderColor: 'var(--border-card)',
               }}
             >
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <MessageSquare className="w-5 h-5" style={{ color: currentThemeConfig.secondaryHex }} />
                 <h3 className="text-xl font-bold text-white">
                   Envie uma mensagem direta
@@ -279,8 +276,8 @@ export const ContactSection: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label htmlFor="name" className="block text-xs font-semibold text-slate-300 mb-1.5">
                         Seu Nome *
@@ -292,7 +289,7 @@ export const ContactSection: React.FC = () => {
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         placeholder="Ex: Carlos Oliveira"
-                        className="w-full px-3.5 py-2.5 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
+                        className="w-full px-3.5 py-2 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
                         style={{
                           backgroundColor: 'var(--bg-card-alt)',
                           borderColor: 'var(--border-card)',
@@ -311,7 +308,7 @@ export const ContactSection: React.FC = () => {
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                         placeholder="Ex: seuemail@empresa.com"
-                        className="w-full px-3.5 py-2.5 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
+                        className="w-full px-3.5 py-2 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
                         style={{
                           backgroundColor: 'var(--bg-card-alt)',
                           borderColor: 'var(--border-card)',
@@ -330,7 +327,7 @@ export const ContactSection: React.FC = () => {
                       value={formState.subject}
                       onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
                       placeholder="Ex: Oportunidade Engenheiro de Dados / Parceria"
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
+                      className="w-full px-3.5 py-2 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all"
                       style={{
                         backgroundColor: 'var(--bg-card-alt)',
                         borderColor: 'var(--border-card)',
@@ -344,12 +341,12 @@ export const ContactSection: React.FC = () => {
                     </label>
                     <textarea
                       id="message"
-                      rows={4}
+                      rows={3}
                       required
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       placeholder="Escreva sua mensagem ou detalhes da proposta..."
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all resize-y"
+                      className="w-full px-3.5 py-2 text-sm rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 border transition-all resize-y"
                       style={{
                         backgroundColor: 'var(--bg-card-alt)',
                         borderColor: 'var(--border-card)',
@@ -357,7 +354,7 @@ export const ContactSection: React.FC = () => {
                     />
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between">
+                  <div className="pt-1 flex items-center justify-between">
                     <p className="text-[11px] text-slate-400">
                       * Campos obrigatórios
                     </p>
@@ -365,7 +362,7 @@ export const ContactSection: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 text-xs font-bold text-white disabled:opacity-50 rounded-xl shadow-md transition-all focus:outline-none focus:ring-2"
+                      className="inline-flex items-center gap-2 px-6 py-2 text-xs font-bold text-white disabled:opacity-50 rounded-xl shadow-md transition-all focus:outline-none focus:ring-2"
                       style={{
                         backgroundColor: currentThemeConfig.accentHex,
                       }}

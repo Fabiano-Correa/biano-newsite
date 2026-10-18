@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         color: 'var(--text-platinum)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand & Summary */}
           <div className="md:col-span-6 space-y-4">
@@ -147,7 +147,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar with Scroll to Top */}
         <div
-          className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400"
+          className="mt-6 pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400"
           style={{ borderColor: 'var(--border-card)' }}
         >
           <p>

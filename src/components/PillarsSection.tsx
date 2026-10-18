@@ -27,55 +27,55 @@ export const PillarsSection: React.FC = () => {
   const getPillarIcon = (iconName: string) => {
     switch (iconName) {
       case 'Database':
-        return <Database className="w-6 h-6" style={{ color: currentThemeConfig.accentHex }} />;
+        return <Database className="w-5 h-5" style={{ color: currentThemeConfig.accentHex }} />;
       case 'Zap':
-        return <Zap className="w-6 h-6" style={{ color: currentThemeConfig.secondaryHex }} />;
+        return <Zap className="w-5 h-5" style={{ color: currentThemeConfig.secondaryHex }} />;
       case 'Cloud':
-        return <Cloud className="w-6 h-6" style={{ color: currentThemeConfig.accentHex }} />;
+        return <Cloud className="w-5 h-5" style={{ color: currentThemeConfig.accentHex }} />;
       case 'ShieldCheck':
-        return <ShieldCheck className="w-6 h-6" style={{ color: currentThemeConfig.secondaryHex }} />;
+        return <ShieldCheck className="w-5 h-5" style={{ color: currentThemeConfig.secondaryHex }} />;
       case 'Server':
-        return <Server className="w-6 h-6" style={{ color: currentThemeConfig.accentHex }} />;
+        return <Server className="w-5 h-5" style={{ color: currentThemeConfig.accentHex }} />;
       case 'Share2':
-        return <Share2 className="w-6 h-6" style={{ color: currentThemeConfig.secondaryHex }} />;
+        return <Share2 className="w-5 h-5" style={{ color: currentThemeConfig.secondaryHex }} />;
       default:
-        return <Database className="w-6 h-6" style={{ color: currentThemeConfig.accentHex }} />;
+        return <Database className="w-5 h-5" style={{ color: currentThemeConfig.accentHex }} />;
     }
   };
 
   return (
     <section
       id="atuacao"
-      className="py-20 border-t"
+      className="py-12 lg:py-10 border-t scroll-mt-20"
       style={{
         backgroundColor: 'var(--bg-main)',
         borderColor: 'var(--border-card)',
       }}
       aria-labelledby="atuacaoTitle"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-4xl mb-8">
           <div
             className="text-xs font-bold uppercase tracking-wider mb-2"
             style={{ color: currentThemeConfig.secondaryHex }}
           >
             Atuação Profissional
           </div>
-          <h2 id="atuacaoTitle" className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight text-balance">
+          <h2 id="atuacaoTitle" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight text-balance">
             Dados, infraestrutura e confiabilidade
           </h2>
-          <p className="mt-3 text-base text-slate-300 leading-relaxed">
+          <p className="mt-2 text-sm text-slate-300 leading-relaxed">
             Atuo na sustentação, evolução e confiabilidade de ambientes de dados críticos, unindo desenvolvimento de soluções em Python e SQL, tuning relacional em MySQL e Oracle e apoio pró-ativo a SRE.
           </p>
         </div>
 
         {/* Pillars Grid - NO company names in cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {corePillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="group p-6 rounded-2xl border transition-all flex flex-col justify-between shadow-lg"
+              className="group p-4 rounded-xl border transition-all flex flex-col justify-between shadow-lg"
               style={{
                 backgroundColor: 'var(--bg-card)',
                 borderColor: 'var(--border-card)',
@@ -83,7 +83,7 @@ export const PillarsSection: React.FC = () => {
             >
               <div>
                 <div
-                  className="w-12 h-12 rounded-xl border flex items-center justify-center mb-5 group-hover:scale-105 transition-transform"
+                  className="w-10 h-10 rounded-lg border flex items-center justify-center mb-3 group-hover:scale-105 transition-transform"
                   style={{
                     backgroundColor: 'var(--bg-card-alt)',
                     borderColor: 'var(--border-card)',
@@ -92,11 +92,11 @@ export const PillarsSection: React.FC = () => {
                   {getPillarIcon(pillar.icon)}
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2 transition-colors">
+                <h3 className="text-lg font-bold text-white mb-1.5 transition-colors">
                   {pillar.title}
                 </h3>
 
-                <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                <p className="text-[13px] text-slate-300 leading-[1.55] mb-4">
                   {pillar.description}
                 </p>
               </div>
@@ -104,7 +104,7 @@ export const PillarsSection: React.FC = () => {
               <div>
                 {/* Badges rendered cleanly without company names */}
                 <div
-                  className="flex flex-wrap items-center gap-1.5 text-xs text-slate-400 pt-4 border-t"
+                  className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-400 pt-3 border-t"
                   style={{ borderColor: 'var(--border-card)' }}
                 >
                   {pillar.badges.map((badge, bIdx) => (
@@ -119,7 +119,7 @@ export const PillarsSection: React.FC = () => {
 
                 <button
                   onClick={() => setSelectedPillar(pillar)}
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold transition-colors"
                   style={{ color: currentThemeConfig.accentHex }}
                 >
                   <span>Ver escopo detalhado</span>

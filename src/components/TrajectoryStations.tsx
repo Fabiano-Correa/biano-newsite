@@ -5,18 +5,18 @@ import { useAppTheme } from '../context/ThemeContext';
 
 export const TrajectoryStations: React.FC = () => {
   const { trajectoryStations } = PORTFOLIO_DATA;
-  const [expandedId, setExpandedId] = useState<string | null>('estacao-09');
-  const { currentThemeConfig, theme } = useAppTheme();
+  const [expandedId, setExpandedId] = useState<string | null>('estacao-11');
+  const { currentThemeConfig } = useAppTheme();
 
   const toggleExpand = (id: string) => {
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
   const scrollToCurrent = () => {
-    const el = document.getElementById('estacao-09');
+    const el = document.getElementById('estacao-11');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setExpandedId('estacao-09');
+      setExpandedId('estacao-11');
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 
 export type AppTheme = 'emerald' | 'blue' | 'ultraviolet';
 
@@ -51,26 +51,16 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<AppTheme>(() => {
-    const saved = localStorage.getItem('fabiano_portfolio_theme');
-    if (saved === 'emerald' || saved === 'blue' || saved === 'ultraviolet') {
-      return saved;
-    }
-    // Default to the new specialized Ultraviolet palette or Emerald
-    return 'ultraviolet';
-  });
-
-  const setTheme = (newTheme: AppTheme) => {
-    setThemeState(newTheme);
-    localStorage.setItem('fabiano_portfolio_theme', newTheme);
-  };
+  const theme: AppTheme = 'blue';
+  const setTheme = () => {};
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
+    document.documentElement.setAttribute('data-theme', 'blue');
+    localStorage.removeItem('fabiano_portfolio_theme');
+  }, []);
 
   const currentThemeConfig =
-    THEME_OPTIONS.find((t) => t.id === theme) || THEME_OPTIONS[0];
+    THEME_OPTIONS.find((t) => t.id === 'blue')!;
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, currentThemeConfig }}>
