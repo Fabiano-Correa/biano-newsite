@@ -126,11 +126,11 @@ export const PORTFOLIO_DATA: PortfolioDataModel = {
     leadSummary:
       'Profissional de dados com sólida experiência em desenvolvimento de soluções em Python e SQL para integração, automação e sustentação de processos em ambientes de missão crítica do setor financeiro e de crédito. Vivência em administração e tuning de bancos relacionais (MySQL e Oracle), integração na nuvem AWS (ex.: ST-S3), apoio contínuo a demandas de SRE e sustentação técnica de alto nível (N3). Base consistente em infraestrutura com Linux, Windows, VMware ESXi e Git.',
     originStory: {
-      year1997: 'Primeiro contato com a TI na antiga 7ª série: uma paixão imediata e duradoura por computadores e tecnologia.',
-      year1998: 'Em 1999, realizou a prova para o colégio técnico estadual em informática.',
-      year2000: 'Em 2000, iniciou a formação técnica em Segurança do Trabalho.',
-      year2008: 'Conquistou o 1º lugar da unidade no curso de microinformática (2002–2003) e foi aluno destaque em montagem e manutenção (2008).',
-      year2015: 'Já casado e com uma filha, manteve o sustento familiar na segurança do trabalho enquanto estudava incansavelmente, até conquistar a primeira oportunidade na TI em 2015.',
+      year1997: 'Minha paixão por computadores começou em 1997, na antiga 7ª série.',
+      year1998: 'Em 1999, prestei o processo seletivo para um colégio técnico estadual em informática.',
+      year2000: 'Em 2000, iniciei o curso técnico em Segurança do Trabalho, segunda opção após não ser aprovado em Informática.',
+      year2008: 'Por razões financeiras construiu a primeira carreira em segurança, mas a paixão pela TI falou mais alto: cursou Gestão em TI e manteve dedicação e estudos contínuos.',
+      year2015: 'Em 2015, iniciou formalmente sua trajetória profissional em TI, consolidando a carreira com persistência.',
       philosophy: 'A persistência transformou cada obstáculo em degrau: desde a 7ª série em 1997, os estudos nunca pararam até consolidar a carreira em dados e confiabilidade.',
     },
     stats: [
@@ -271,17 +271,17 @@ export const PORTFOLIO_DATA: PortfolioDataModel = {
       id: 'estacao-01',
       stationNumber: '01',
       period: '1997 – 1999',
-      title: 'O Despertar da Paixão & A Prova do Colégio Técnico Estadual',
+      title: 'A Paixão por Computadores & Processo Seletivo do Colégio Técnico',
       context: 'A Origem da Vocação',
       roleType: 'shift',
       shortDesc:
-        'Em 1997, na antiga 7ª série, aconteceu meu primeiro contato com a TI e me apaixonei por computadores. Em 1999, fiz a prova para o colégio técnico estadual em informática.',
+        'Minha paixão por computadores começou em 1997, na antiga 7ª série. Em 1999, prestei o processo seletivo para o colégio técnico estadual: não fui aprovado em Informática (1ª opção), mas passei para Segurança do Trabalho (2ª opção).',
       expandedDetails:
-        'Em 1997, na antiga 7ª série, tive o primeiro contato com a informática em sala de aula e nasceu ali a paixão por computadores, circuitos e tecnologia. No ano de 1999, fiz a prova para ingressar no colégio técnico estadual na área de informática. Embora não tenha obtido a vaga naquele momento, essa tentativa fortaleceu a certeza de que a tecnologia era a minha verdadeira vocação, alimentando a busca constante por aprendizado.',
+        'A paixão por computadores começou em 1997, na antiga 7ª série, ao ter o primeiro contato com a informática. Em 1999, prestei o processo seletivo para um colégio técnico estadual. Não fui aprovado em Informática, minha primeira opção, mas fui classificado e passei para Segurança do Trabalho, minha segunda opção. O interesse e a vocação pela tecnologia continuaram firmes ao longo dos anos.',
       highlights: [
-        '1997: Descoberta da paixão pela informática na 7ª série do ensino fundamental',
-        '1999: Prestou exame para o colégio técnico estadual em informática',
-        'Início do compromisso autodidata com estudos contínuos em computação',
+        '1997: Início da paixão por computadores na antiga 7ª série',
+        '1999: Processo seletivo para colégio técnico estadual (1ª opção Informática, 2ª opção Segurança do Trabalho)',
+        'Classificação e aprovação para o curso de Segurança do Trabalho',
       ],
       skillsApplied: ['Curiosidade Técnica', 'Resiliência', 'Vocação por Tecnologia'],
       tags: ['1997', '7ª Série', '1999', 'Colégio Técnico Estadual'],
@@ -290,13 +290,13 @@ export const PORTFOLIO_DATA: PortfolioDataModel = {
       id: 'estacao-02',
       stationNumber: '02',
       period: '2000 – 2010',
-      title: 'Segurança do Trabalho, 1º Lugar em Microinformática & Destaque em Hardware',
+      title: 'Início em Segurança do Trabalho, 1º Lugar em Microinformática & Destaque em Hardware',
       context: 'Estudos em Paralelo ao Trabalho',
       roleType: 'previous',
       shortDesc:
-        'Em 2000 ingressei no curso de Segurança do Trabalho. Em 2002 iniciei o curso de microinformática, concluído em 2003 com o 1º lugar da unidade de ensino. Em 2008, destaque no curso de montagem e manutenção.',
+        'Em 2000 iniciei o curso de Segurança do Trabalho. Em 2002 comecei o curso de microinformática, concluído em 2003 com o 1º lugar da unidade de ensino. Em 2008, destaque no curso de montagem e manutenção.',
       expandedDetails:
-        'No ano 2000 ingressei na formação em Segurança do Trabalho. Em paralelo, os estudos em tecnologia avançaram: iniciei em 2002 o curso de microinformática, concluído em 2003 conquistando com mérito o 1º lugar da unidade de ensino. Em 2008, no curso de montagem e manutenção de computadores, destaquei-me novamente como aluno exemplar. Entre 2006 e 2010 também trabalhei com instalação de segurança eletrônica, revelação digital fotográfica e em gráfica comercial.',
+        'No ano 2000 iniciei a formação em Segurança do Trabalho após a aprovação no colégio técnico. Em paralelo, a busca pela tecnologia nunca parou: ingressei em 2002 no curso de microinformática, concluído em 2003 conquistando com mérito o 1º lugar da unidade de ensino. Em 2008, no curso de montagem e manutenção de computadores, destaquei-me novamente como aluno exemplar.',
       highlights: [
         '2000: Ingresso na formação técnica em Segurança do Trabalho',
         '2002–2003: Conclusão do curso de Microinformática com 1º Lugar da unidade de ensino',
