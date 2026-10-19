@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown, FileText, Send } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { useAppTheme } from '../context/ThemeContext';
-import professionalPortrait from '../../exemplos/Retrato profissional de homem com óculos.png';
+import professionalPortrait from '../assets/images/fabiano_portrait.png';
 
 interface HeroProps {
   onNavigateToTrajectory: () => void;
